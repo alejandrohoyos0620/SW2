@@ -70,7 +70,7 @@
     <Property Name="id_servicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre_servicio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="descripcion_servicio" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="imagen_servicio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="imagen_servicio" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="calificaciones" Relationship="Self.FK_calificaciones_servicios" FromRole="servicios" ToRole="calificaciones" />
     <NavigationProperty Name="reservaServicoes" Relationship="Self.FK_reservaServico_servico" FromRole="servicios" ToRole="reservaServico" />
   </EntityType>

@@ -1,0 +1,37 @@
+﻿
+@model Proyecto.Models.ServicioModel
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<h2>Create</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Descripción
+        </th>
+        <th>
+            Imagen
+        </th>
+    </tr>
+
+
+    <tr>
+        <td>
+            @Html.DisplayFor(model => model.Nombre_servicio)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.descripcion_servicio)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.Imagen)
+        </td>
+    </tr>
+</table>
+
+

@@ -1,0 +1,32 @@
+﻿
+@model IEnumerable<Proyecto.Models.ServicioModel>
+@{
+    ViewBag.Title = "Servicio";
+}
+
+<h2>Servicio</h2>
+@using (Html.BeginForm("Create","Servicio", FormMethod.Post))
+{
+    <table class="table">
+        <tr>
+            <th>
+                Nombre
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre_servicio)
+                    <p>
+                        @Html.ActionLink("Detalle", "Detalle", new { id = item.Servicio})
+                    </p>
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+
+

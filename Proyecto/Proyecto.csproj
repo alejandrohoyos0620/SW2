@@ -208,14 +208,17 @@
     <Content Include="Views\Cliente\prueba.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Usuario\Create.cshtml" />
+    <Content Include="Views\Servicio\Index.cshtml" />
+    <Content Include="Views\Servicio\Detalle.cshtml" />
+    <Content Include="Views\Servicio\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Img\" />
     <Folder Include="Views\Calificaciones\" />
     <Folder Include="Views\Mascota\" />
     <Folder Include="Views\ReservaServicio\" />
     <Folder Include="Views\Reserva\" />
-    <Folder Include="Views\Servicio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

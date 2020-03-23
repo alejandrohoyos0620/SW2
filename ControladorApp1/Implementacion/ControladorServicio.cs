@@ -24,10 +24,7 @@ namespace ControladorApp1.Implementacion
 
         public ServicioDTO BuscarServicio(int id)
         {
-            MapeadorControladorServicio mapeador = new MapeadorControladorServicio();
-            var ServicioDBModel = _repositorio.BuscarServicio(id);
-            var ServicioDTO = mapeador.MapearT1T2(ServicioDBModel);
-            return ServicioDTO;
+            throw new NotImplementedException();
         }
 
         public IEnumerable<ServicioDTO> ConsultaServicios()

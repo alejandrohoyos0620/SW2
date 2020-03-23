@@ -24,7 +24,7 @@ namespace AccesoDatos1.Implementacion
 
         public IEnumerable<CalificacionesDBModel> ConsultaCalificaciones()
         {
-            using(petServicesEntities1 db= new petServicesEntities1())
+            using(petServicesEntities1 db = new petServicesEntities1())
             {
                 IList<calificacione> listaCalificacionesDB = db.calificaciones.ToList();
                 var lista = new MapeadorRepositorioCalificaciones().MapearT1T2(listaCalificacionesDB);

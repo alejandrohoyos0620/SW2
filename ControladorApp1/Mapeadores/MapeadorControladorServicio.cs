@@ -17,7 +17,8 @@ namespace ControladorApp1.Mapeadores
                 Servicio = entrada.Servicio,
                 Nombre_servicio = entrada.Nombre_servicio,
                 descripcion_servicio = entrada.descripcion_servicio,
-                Imagen = entrada.Imagen
+                Imagen = entrada.Imagen,
+                Precio = entrada.Precio
             };
         }
 
@@ -36,7 +37,8 @@ namespace ControladorApp1.Mapeadores
                 Servicio = entrada.Servicio,
                 Nombre_servicio = entrada.Nombre_servicio,
                 descripcion_servicio = entrada.descripcion_servicio,
-                Imagen = entrada.Imagen
+                Imagen = entrada.Imagen,
+                Precio = entrada.Precio
 
             };
         }

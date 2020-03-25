@@ -1,0 +1,27 @@
+﻿.cont-index{
+    
+}
+.jumbotron{
+    background-color:teal;
+    
+}
+.title-index {
+    color: whitesmoke;
+}
+.subtitle-index{
+    color:teal;
+    padding-bottom:10px;
+    border-bottom: solid 1px teal;
+    width:100%;
+}
+.subtitle-index-s {
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: solid 1px white;
+    width: 100%;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

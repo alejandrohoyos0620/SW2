@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Reserva";
+}
+
+
+    <body class="row">
+        <div class="alert alert-info">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Debido a la época del COVID-19, Se prestará solo un servicio por persona</strong>,
+            Cuando se acabe la cuarentena, nuestro servicio regresará en completa normalidad.
+        </div>
+        <div class="col-md-4">
+            <h1>Fecha actual</h1>
+
+            <div id="box">
+                <div id="box-date"></div>
+
+                <div id="box-time"></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+            @using (Html.BeginForm("Buscar", "Reserva"))
+            {<label>Selecciona la fecha deseada:</label>
+                <h1>Eliga la fecha de su Reserva</h1>
+                <input type="date" name="fecha" min="2020-03-25">
+                <br />
+                <br />
+                <label>Selecciona la hora deseada:</label>
+                <input type="time" name="hora" min="07:00" max="18:00">
+                <button type="submit"> Enviar </button>
+            }
+        </div>
+    </body>
+
+
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/scriptReloj.js")
+}
+@Styles.Render("~/Content/estiloReloj.css")

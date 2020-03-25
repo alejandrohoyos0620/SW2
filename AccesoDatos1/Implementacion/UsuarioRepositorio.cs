@@ -54,5 +54,27 @@ namespace AccesoDatos1.Implementacion
             }
             
         }
+        public string IsValid(string nombre, string pass)
+        {
+            string isvalid = "";
+            try
+            {
+                using (petServicesEntities1 db = new petServicesEntities1())
+                {
+                    var Query = db.usuarios.Where(u => u.nombre == nombre && u.contraseña == pass).Select(p => p.nombre);
+                    if (Query.Count() > 0)
+                    {
+                        isvalid = Query.First();
+                    }
+
+                    return isvalid;
+                }
+
+            }
+            catch
+            {
+                return isvalid = "0";
+            }
+        }
     }
 }

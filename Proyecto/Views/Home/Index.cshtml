@@ -1,28 +1,29 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-   
-    <div><img src="~/Imagenes/fondo.jpg" width="1150" height="100" /></div>
-    
-    <div class="jumbotron" align="center">
-        <h2> MI MEJOR AMIGO</h2><img src="~/Imagenes/logo2.png" width="150" height="150" />   <!--Titulo del index-->
- </div>
 
-<div class="row">  <!--Creo un div Grande para poder poner varios div alineados-->
-    <div class="col-md-4">
-        <h2><b>Misión 🐾</b></h2> <!--Creo el div para poner titulo y descripción de la visión-->
-        <p>
+<div><img src="~/Imagenes/fondo.jpg" width="1150" height="100" /></div>
+
+<div class="jumbotron" align="center">
+    <h2 class="title-index"> MI MEJOR AMIGO</h2><img src="~/Imagenes/logo2.png" width="150" height="150" />   <!--Titulo del index-->
+</div>
+
+<div class="row">
+    <!--Creo un div Grande para poder poner varios div alineados-->
+    <div class="col-md-4 cont-index">
+        <h2 class="subtitle-index"><b>Misión 🐾</b></h2> <!--Creo el div para poner titulo y descripción de la visión-->
+        <p class="text-index">
             Dar un servicio integral de estética y salud a su mascota,
-            con la mejor relación precio valor. 
-            Comprendemos que su mejor amigo necesita de cuidados que, 
-            muchas veces se nos convierten en tareas difíciles debido, 
+            con la mejor relación precio valor.
+            Comprendemos que su mejor amigo necesita de cuidados que,
+            muchas veces se nos convierten en tareas difíciles debido,
             al ritmo de nuestras labores y de la cuidad.
         </p>
 
     </div>
-    <div class="col-md-4">
-        <h2><b>Visión 🐾</b></h2> <!--Creams el div para poner titulo y descripción de la Visión-->
-        <p>
+    <div class="col-md-4 cont-index">
+        <h2 class="subtitle-index"><b>Visión 🐾</b></h2> <!--Creams el div para poner titulo y descripción de la Visión-->
+        <p class="text-index">
             Por que creemos en lo que hacemos, "Mi Mejor Amigo" nace para ofrecer un
             concepto innovador, buscamos ganar la confianza de nuestros clientes,
             demostrando calidad, responsabilidad y transparencia a través de la
@@ -30,10 +31,10 @@
             Nos encantaría convertirnos en ejemplo de servicio y en el eslabón familiar.
             <b>¡No somos una solución, somos una necesidad!</b>.
         </p>
-        
+
     </div>
-    <div class="col-md-4">
-        <h2><b>Contactos 🐾</b></h2><!--Creo el div para poner titulo y las imagenes de contactos-->
+    <div class="col-md-4 cont-index">
+        <h2 class="subtitle-index"><b>Contactos 🐾</b></h2><!--Creo el div para poner titulo y las imagenes de contactos-->
 
         <div class="row">
             <div class="col-md-3"><img src="~/Imagenes/contactos/facebook.png" width="80" height="80" /><h4>Facebook</h4></div>
@@ -49,16 +50,16 @@
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2><b>Convenios 🐾</b></h2> <!--Creo el div para poner titulo y las imagenes de convenios-->
+    <div class="col-md-4 cont-index">
+        <h2 class="subtitle-index"><b>Convenios 🐾</b></h2> <!--Creo el div para poner titulo y las imagenes de convenios-->
         <div class="row">
             <div class="col-md-3"><img src="~/Imagenes/convenios/lavakan.png" width="80" height="80" /></div>
             <div class="col-md-3"><img src="~/Imagenes/convenios/pethotel.png" width="80" height="80" /></div>
             <div class="col-md-3"><img src="~/Imagenes/convenios/taxipet.png" width="80" height="80" /></div>
         </div>
     </div>
-    <div class="col-md-4">
-        <h2><b>Servicios 🐾</b></h2> <!--Creams el div para poner titulo y las imagenes de los servicios-->
+    <div class="col-md-4 cont-index">
+        <h2 class="subtitle-index"><b>Servicios 🐾</b></h2> <!--Creams el div para poner titulo y las imagenes de los servicios-->
         <div class="row">
             <div class="col-md-3"><img src="~/Imagenes/servicios/hotel.png" width="80" height="80" /><h4>Hotel</h4></div>
             <div class="col-md-3"><img src="~/Imagenes/servicios/paseador.png" width="80" height="80" /><h4>Paseos</h4></div>
@@ -67,10 +68,11 @@
         </div>
     </div>
 
-    <div class="col-md-4"
-    <br/><br/><br /><br />
-        <div class="row">
-            <div class="col-md-3"><img src="~/Imagenes/servicios/veterinaria.png" width="80" height="80" /><h4>Veterinaria</h4></div>
-        </div>
+    <div class="col-md-4 cont-index">
+                          <div class="row">
+                              <h2 class="subtitle-index-s">S</h2>
+                              <div class="col-md-3"><img src="~/Imagenes/servicios/veterinaria.png" width="80" height="80" /><h4>Veterinaria</h4></div>
+                          </div>
     </div>
 </div>
+@Styles.Render("~/Content/stylesindex.css")

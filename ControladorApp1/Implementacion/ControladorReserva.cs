@@ -23,9 +23,10 @@ namespace ControladorApp1.Implementacion
             throw new NotImplementedException();
         }
 
-        public ReservaDTO BuscarReserva(int id)
+        public Boolean BuscarReserva(DateTime fecha, TimeSpan hora)
         {
-            throw new NotImplementedException();
+            var Validacion = _repositorio.BuscarReserva(fecha, hora);
+            return Validacion;
         }
 
         public IEnumerable<ReservaDTO> ConsultaReserva()

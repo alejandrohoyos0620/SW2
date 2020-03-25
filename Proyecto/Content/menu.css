@@ -1,0 +1,132 @@
+﻿.cont-menu{
+    background:teal;
+    color:whitesmoke;
+    margin-bottom:100px;
+}
+.menu{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    font-size:20px;
+    color: whitesmoke;
+    
+}
+    .menu-principal{
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:right;
+        list-style:none;
+    }
+        .menu-principal li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: -40px;
+            margin-right: 70px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+.right-nav li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:30px;
+    padding-left:15px;
+    padding-right:15px;
+}
+.right-nav {
+    width: 25%;
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+.menu a{
+    text-decoration:none;
+    color:whitesmoke;
+}
+.cuerpo-contenidos{
+    margin-top: 60px;
+}
+.petservices{
+    width:100%;
+    display:block;
+    font-size:25px;
+    color:whitesmoke;
+    margin-top:20px;
+    border-bottom:solid 1px whitesmoke;
+}
+.petservices:hover{
+    text-decoration:none;
+    color:whitesmoke;
+}
+.menu-principal li:hover{
+    background:white;
+    border-radius:5px;
+}
+.menu-principal li:hover a{
+    color: teal;
+}
+.right-nav li:hover {
+    background: white;
+    border-radius: 5px;
+    color:teal;
+}
+
+    .right-nav li:hover a {
+        color: teal;
+    }
+
+
+
+
+.social-bar {
+    position: fixed;
+    left: 0;
+    top: 40%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.social-bar-item {
+    color: white;
+    width: 40px;
+    text-decoration: none;
+    padding: .7rem;
+    display: inline-block;
+    transition: all .5s;
+    text-align: center;
+    background-color: #000000;
+    border: solid 1px whitesmoke;
+    border-left: none;
+}
+
+    .social-bar-item:hover {
+        width: 80px;
+        padding-left: 3rem;
+        border-radius: 0 1rem 1rem 0;
+        box-shadow: 0 0 .5rem rgba(0,0,0,0.42);
+    }
+
+.whatsapp {
+    border-radius: 0 1rem 0 0;
+    background: #1CD444;
+}
+
+  
+.facebook{
+    background: #3b5998;
+}
+
+.instagram{
+    background-image: linear-gradient(to bottom left, #CC059E, #FA7834);
+}
+
+.mail {
+    border-radius: 0 0 1rem 0;
+    background: #ae181f;
+}
+
+    

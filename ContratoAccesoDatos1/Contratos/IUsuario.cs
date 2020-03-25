@@ -14,5 +14,6 @@ namespace ContratoAccesoDatos1.Contratos
         bool EliminarUsuario( int id);
         bool ActualizarUsuario(UsuarioDBModel usuario);
         IEnumerable<UsuarioDBModel> ConsultaUsuarios();
+        string IsValid(string nombre, string pass);
     }
 }

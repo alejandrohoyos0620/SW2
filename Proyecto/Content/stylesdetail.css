@@ -1,0 +1,89 @@
+﻿.btn-volver{
+    width:100%;
+    display:flex;
+    justify-content:left;
+    margin-top:30px;
+    text-align:center;
+    
+
+}
+.btnvolver {
+    border-radius:5px;
+    background: teal;
+    color: whitesmoke;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: solid 2px teal;
+}
+.btnvolver:hover{
+    background: white;
+    color: teal;
+    text-decoration: none;
+    }
+.title-detail{
+    font-size:36px;
+    padding:30px;
+    width:100%;
+    text-align:center;
+    border-bottom: solid 1px teal;
+    color: teal;
+    margin-bottom:30px;
+}
+.cont-img-detail {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.cont-img-detail img{
+    width:250px;
+    height:250px;
+}
+.body-detail{
+    width:100%;
+    font-size:20px;
+    text-align:justify;
+    margin-bottom:30px;
+}
+.price{
+    text-align:center;
+    margin-bottom:60px;
+
+}
+.cont-btns{
+    margin-bottom:50px;
+}
+.boton{
+    padding:10px 30px;
+    text-decoration:none;
+    margin-left:20px;
+    margin-right:20px;
+    border-radius:5px;
+}
+.btnreservar {
+    background: white;
+    color: teal;
+    border: solid 2px teal;
+    text-decoration: none;
+}
+.btnreservar:hover{
+    text-decoration:none;
+    background:teal;
+    color:whitesmoke;
+}
+.btncalificar {
+    background: teal;
+    color: whitesmoke;
+    border: solid 2px teal;
+}
+.btncalificar:hover{
+    background:white;
+    color:teal;
+    text-decoration:none;
+}
+.texto-inicio-sesion{
+    font-size:20px;
+    padding-bottom:30px;
+}
+

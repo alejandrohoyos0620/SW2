@@ -17,9 +17,17 @@ namespace AccesoDatos1.Implementacion
             throw new NotImplementedException();
         }
 
-        public ReservaDBModel BuscarReserva(int id)
+        public Boolean BuscarReserva(DateTime fecha, TimeSpan hora)
         {
-            throw new NotImplementedException();
+            using (petServicesEntities1 db = new petServicesEntities1())
+            {
+                var Query = db.reservas.Where(u => u.fecha == fecha && u.hora == hora).Select(p => p.id_reservacion);
+                if (Query.Count() > 0)
+                {
+                    return false;
+                }
+                return true;
+            }
         }
 
         public IEnumerable<ReservaDBModel> ConsultaReserva()

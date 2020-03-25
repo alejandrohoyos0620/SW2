@@ -63,6 +63,7 @@
           <ScalarProperty Name="nombre_servicio" ColumnName="nombre_servicio" />
           <ScalarProperty Name="descripcion_servicio" ColumnName="descripcion_servicio" />
           <ScalarProperty Name="imagen_servicio" ColumnName="imagen_servicio" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

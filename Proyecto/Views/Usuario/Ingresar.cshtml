@@ -1,0 +1,49 @@
+﻿@model Proyecto.Models.UsuarioModel
+
+@{
+    ViewBag.Title = "Iniciar Sesión";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <body>
+        <div class="div-title">
+            <h2 class="title-user">Iniciar Sesión</h2>
+        </div>
+
+        <div class="formulario">
+            <div class="title-form">
+                <h4>Ingresar</h4>
+            </div>
+
+            <div class="campo">
+                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "labelinput" })
+                <div class="div-input">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "input-formu" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, null, new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="campo">
+                @Html.LabelFor(model => model.Contraseña, htmlAttributes: new { @class = "labelinput" })
+                <div class="div-input">
+                    @Html.PasswordFor(model => model.Contraseña,  new { @class = "input-formu" } )
+                    @Html.ValidationMessageFor(model => model.Contraseña, null, new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="campo-boton">
+                <div class="div-boton">
+                    <input type="submit" value="Iniciar Sesión" class="boton" />
+                </div>
+                    <div class="div-boton">@Html.ActionLink("Registrame", "Create", "", new { @class = "boton" })</div>
+                
+            </div>
+
+        </div>
+    </body>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+@Styles.Render("~/Content/estiloRegistroUsuario.css")

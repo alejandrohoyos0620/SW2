@@ -1,25 +1,39 @@
 ﻿
 @model Proyecto.Models.ServicioModel
-@{ 
+@{
     ViewBag.Title = "Detalle";
 }
 
 
-    <div style="border-color=black" >
-        <li>@Html.ActionLink("Volver atras", "Index", "Servicio")</li>
-        <div>
-            <h2 align="center"> @Html.DisplayFor(model => model.Nombre_servicio)</h2>
-        </div>
-        <div align="center">
-            <p>
-                @Html.DisplayFor(model => model.Imagen)  
-            </p>
-            
-            <img src="~/Img/@Html.DisplayFor(model => model.Imagen)" width="350" height="300"/>
-        </div>  
-        <div>
-            <p align="center">@Html.DisplayFor(model => model.descripcion_servicio)</p>
-        </div>
+<div>
+    <div class="btn-volver">@Html.ActionLink("<< Volver atras", "Index", "Servicio", new { @class = "btnvolver" })</div>
+    <div>
+        <h2 class="title-detail"> @Html.DisplayFor(model => model.Nombre_servicio)</h2>
     </div>
+    <div class="cont-img-detail">
+        <img src="~/Imagenes/servicios/@Html.DisplayFor(model => model.Imagen)" alt=""/>
+    </div>
+    <div class="body-detail">
+        <p>@Html.DisplayFor(model => model.descripcion_servicio)</p>
+    </div>
+    <div class="price">
+        <p>Precio: $@Html.DisplayFor(model => model.Precio)</p>
+    </div>
+
+    <div class="cont-btns" align="center">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <a href="@Url.Action("Index", "Reserva")" class="boton btnreservar">Reservar servicio</a>
+        <a href="@Url.Action("Index", "Calificaciones", new { id = Model.Servicio })" class="boton btncalificar">Calificar servicio</a>
+        }
+        else
+        {
+            <h4 class="texto-inicio-sesion">Debes iniciar sesión para poder contratar y calificar nuestros servicios</h4>
+            <a href="@Url.Action("Ingresar", "Usuario")" class="boton btncalificar">Ir a inicio de sesión</a>
+        }
+    </div>
+</div>
+
+@Styles.Render("~/Content/stylesdetail.css")
 
 

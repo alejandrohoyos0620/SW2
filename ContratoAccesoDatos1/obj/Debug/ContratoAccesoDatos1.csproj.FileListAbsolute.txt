@@ -3,9 +3,19 @@ C:\Users\Usuario\source\repos\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos
 C:\Users\Usuario\source\repos\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.csprojAssemblyReference.cache
 C:\Users\Usuario\source\repos\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.dll
 C:\Users\Usuario\source\repos\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.pdb
-C:\Users\user\Desktop\sw\Protecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.dll
-C:\Users\user\Desktop\sw\Protecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.pdb
-C:\Users\user\Desktop\sw\Protecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.csprojAssemblyReference.cache
-C:\Users\user\Desktop\sw\Protecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\sw\Protecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.dll
-C:\Users\user\Desktop\sw\Protecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.pdb
+D:\Documentos\SW2\Protecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.dll
+D:\Documentos\SW2\Protecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.pdb
+D:\Documentos\SW2\Protecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.csprojAssemblyReference.cache
+D:\Documentos\SW2\Protecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.dll
+D:\Documentos\SW2\Protecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.pdb
+D:\Documentos\SW2\Proyecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.dll
+D:\Documentos\SW2\Proyecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.pdb
+D:\Documentos\SW2\Proyecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.csprojAssemblyReference.cache
+D:\Documentos\SW2\Proyecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.dll
+D:\Documentos\SW2\Proyecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.pdb
+C:\Users\57312\Documents\Proyecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.dll
+C:\Users\57312\Documents\Proyecto petServices\ContratoAccesoDatos1\bin\Debug\ContratoAccesoDatos1.pdb
+C:\Users\57312\Documents\Proyecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.csprojAssemblyReference.cache
+C:\Users\57312\Documents\Proyecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.csproj.CoreCompileInputs.cache
+C:\Users\57312\Documents\Proyecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.dll
+C:\Users\57312\Documents\Proyecto petServices\ContratoAccesoDatos1\obj\Debug\ContratoAccesoDatos1.pdb

@@ -132,10 +132,6 @@
       <Project>{dd919eb3-defa-4196-be01-a219ea0a94fe}</Project>
       <Name>ContratoAccesoDatos1</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RepositorioFake1\RepositorioFake1.csproj">
-      <Project>{3775ff49-60da-4828-839a-e94661935bd9}</Project>
-      <Name>RepositorioFake1</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

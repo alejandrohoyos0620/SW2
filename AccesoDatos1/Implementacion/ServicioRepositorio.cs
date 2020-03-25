@@ -20,7 +20,12 @@ namespace AccesoDatos1.Implementacion
 
         public ServicioDBModel BuscarServicio(int id)
         {
-            throw new NotImplementedException();
+            using (petServicesEntities1 db = new petServicesEntities1())
+            {
+                servicio ServicioBD = db.servicios.Find(id);
+                var Servicio = new MapeadorRepositorioServico().MapearT1T2(ServicioBD);
+                return Servicio;
+            }
         }
 
         public IEnumerable<ServicioDBModel> ConsultaServicios()

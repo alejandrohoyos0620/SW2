@@ -50,5 +50,11 @@ namespace ControladorApp1.Implementacion
             return respuesta;
             
         }
+        public string IsValid(string nombre, string pass)
+        {
+            string isvalid = _repositorio.IsValid(nombre, pass);
+            return isvalid;
+
+        }
     }
 }

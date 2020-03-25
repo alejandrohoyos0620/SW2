@@ -4,9 +4,11 @@ using Proyecto.Mapeadores;
 using Proyecto.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Proyecto.Controllers
 {
@@ -15,16 +17,8 @@ namespace Proyecto.Controllers
         IUsuarioApp _controlador;
         public UsuarioController(IUsuarioApp app)
         {
-           _controlador = app;
+            _controlador = app;
 
-        }
-
-        public ActionResult Index()
-        {
-            MapeadorUIUsuario mapeador = new MapeadorUIUsuario();
-            IEnumerable<UsuarioDTO> ListaUsuarioDTO = _controlador.ConsultaUsuarios();
-            IEnumerable<UsuarioModel> model = mapeador.MapearT1T2(ListaUsuarioDTO);
-            return View(model);
         }
 
         public ActionResult Create()
@@ -40,12 +34,25 @@ namespace Proyecto.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    MapeadorUIUsuario mapeador = new MapeadorUIUsuario();
-                    UsuarioDTO dto = mapeador.MapearT2T1(model);
-                    bool guardado = _controlador.IngresarUsuario(dto);
-                    if (guardado)
+                    if (model.Contraseña2.Equals(model.Contraseña))
                     {
-                        return RedirectToAction("Index");
+                        UsuarioModel model2 = new UsuarioModel()
+                        {
+                            Id_usuario = model.Id_usuario,
+                            Nombre = model.Nombre,
+                            Contraseña = model.Contraseña
+                        };
+                        MapeadorUIUsuario mapeador = new MapeadorUIUsuario();
+                        UsuarioDTO dto = mapeador.MapearT2T1(model2);
+                        bool guardado = _controlador.IngresarUsuario(dto);
+                        if (guardado)
+                        {
+                            return RedirectToAction("../Home/Index");
+                        }
+                        else
+                        {
+                            return View(model);
+                        }
                     }
                     else
                     {
@@ -62,5 +69,45 @@ namespace Proyecto.Controllers
                 return View();
             }
         }
+
+
+
+        public ActionResult Ingresar()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Ingresar(UsuarioModel user)
+        {
+
+            if (IsValid(user.Nombre, user.Contraseña).Equals(""))
+            {
+                ModelState.AddModelError("", "Inicio de sesión incorrecta.");
+                Debug.WriteLine("Inicio de sesión incorrecta");
+
+            }
+            else
+            {
+                FormsAuthentication.SetAuthCookie(user.Nombre, false);
+                Debug.WriteLine("Inicio de sesión");
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
+        }
+
+        public ActionResult Salir()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
+        private string IsValid(string nombre, string pass)
+        {
+            string isValid = _controlador.IsValid(nombre, pass);
+            return isValid;
+        }
+
     }
 }

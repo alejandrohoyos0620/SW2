@@ -12,5 +12,6 @@ namespace ContratosControladorApp1.DTO
         public string Nombre_servicio { get; set; }
         public string descripcion_servicio { get; set; }
         public string Imagen { get; set; }
+        public int Precio { get; set; }
     }
 }

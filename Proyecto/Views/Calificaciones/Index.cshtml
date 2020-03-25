@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Calificaciones";
+}
+
+<div>
+    <div>
+        <h2 class="title-calification">Calificación de servicio</h2>
+    </div>
+    <div align="center"><h4 class="subtitle-calification">Escribe un comentario (opcional)</h4></div>
+    <div align="center">
+        <textarea class="coments" name="mitextarea" id="mitextarea" cols="100" rows="5" style="resize: both;">
+        </textarea>
+    </div>
+</div>
+<div align="center"><h4 class="subtitle-calification">Elige tu grado de satisfacción con el servicio adquirido</h4></div>
+<div class="cont-caras" align="center">
+
+    <a href="@Url.Action("Index","Servicio")"><img src="~/Imagenes/botones/caratriste.png" /><p>Enviar</p></a>
+    <a href="@Url.Action("Index","Servicio")"><img src="~/Imagenes/botones/caramedia.png" /><p>Enviar</p></a>
+    <a href="@Url.Action("Index","Servicio")"><img src="~/Imagenes/botones/carafeliz.png" /><p>Enviar</p></a>
+</div>
+
+@Styles.Render("~/Content/stylescalification.css")

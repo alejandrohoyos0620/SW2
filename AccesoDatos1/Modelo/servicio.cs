@@ -25,6 +25,7 @@ namespace AccesoDatos1.Modelo
         public string nombre_servicio { get; set; }
         public string descripcion_servicio { get; set; }
         public string imagen_servicio { get; set; }
+        public int precio { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<calificacione> calificaciones { get; set; }

@@ -19,7 +19,7 @@ namespace Proyecto.Controllers
 
         }
 
-        public ActionResult Index()
+        public ActionResult Index(String nombre)
         {
             MapeadorUICalificaciones mapeador = new MapeadorUICalificaciones();
             IEnumerable<CalificacionesDTO> ListaCalificacionDTO = _controlador.ConsultaCalificaciones();

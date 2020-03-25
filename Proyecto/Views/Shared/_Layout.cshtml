@@ -1,15 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/menu.css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/0b24f8952c.js"></script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="social-bar">
+        <a href="https://wa.me/573007749537" target="_blank" class="social-bar-item whatsapp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/Mi-Mejor-Amigo-112872587019688/?modal=admin_todo_tour" target="_blank" class="social-bar-item facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/mmapetservices/" target="_blank" class="social-bar-item instagram"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:manuel260497@gmail.com" class="social-bar-item mail"><i class="far fa-envelope"></i></a>
+    </div>
+    <div class="navbar cont-menu navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -17,21 +25,37 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Pet Services", "Index", "Home", new { area = "" }, new { @class = "petservices" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Iniciar Sesión", "Index", "Home")</li> <!--Boton iniciar Sesión-->
-                    <li>@Html.ActionLink("Registrarse como usuario", "About", "Home")</li><!--Botón Registrarse como usuario-->
+            <div class="menu">
+                <ul class="menu-principal">
+                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Cliente", "Index", "Cliente")</li>
-                    <li>@Html.ActionLink("Usuario", "Index", "Usuario")</li>
-
+                    <li>@Html.ActionLink("Servicio", "Index", "Servicio")</li>
                 </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <ul class="right-nav">
+                        <li class="right-li">  @User.Identity.Name  </li>
+                        <li class="right-li">@Html.ActionLink("Salir", "Salir", "Usuario")</li>
+                    </ul>
+
+                }
+                else
+                {
+
+                    <ul class="right-nav">
+                        <li>@Html.ActionLink("Iniciar sesión", "Ingresar", "Usuario")</li>
+
+                    </ul>
+
+                }
+
+
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container cuerpo-contenidos body-content">
         @RenderBody()
         <hr />
         <footer>
@@ -42,5 +66,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jqueryval")
 </body>
 </html>

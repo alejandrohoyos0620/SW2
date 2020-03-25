@@ -5,28 +5,25 @@
 }
 
 <h2>Servicio</h2>
-@using (Html.BeginForm("Create","Servicio", FormMethod.Post))
-{
-    <table class="table">
-        <tr>
-            <th>
-                Nombre
-            </th>
-        </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nombre_servicio)
-                    <p>
-                        @Html.ActionLink("Detalle", "Detalle", new { id = item.Servicio})
-                    </p>
-                </td>
-            </tr>
-        }
-    </table>
-}
+<table class="table">
+    
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="fila">
+                <h4 class="nombre-servicio">@Html.DisplayFor(modelItem => item.Nombre_servicio)</h4>
+                <p>
+                    @Html.ActionLink("Detalle", "Detalle", new { id = item.Servicio }, new { @class = "btn-detalle" })
+                </p>
+            </td>
+        </tr>
+    }
+</table>
+
+@Styles.Render("~/Content/stylesservices.css")
+
 
 
 

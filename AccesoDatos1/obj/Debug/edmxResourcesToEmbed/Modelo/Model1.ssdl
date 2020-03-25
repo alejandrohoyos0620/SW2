@@ -14,7 +14,7 @@
     <Key>
       <PropertyRef Name="id_cliente" />
     </Key>
-    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="correo" Type="varchar" MaxLength="50" />
   </EntityType>
@@ -57,7 +57,8 @@
     <Property Name="id_servicio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre_servicio" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="descripcion_servicio" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="imagen_servicio" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="imagen_servicio" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="precio" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="usuarios">
     <Key>

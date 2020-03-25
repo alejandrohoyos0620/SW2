@@ -172,6 +172,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\estiloRegistroUsuario.css" />
+    <Content Include="Content\estiloReloj.css" />
+    <Content Include="Content\stylesdetail.css" />
+    <Content Include="Content\stylescalification.css" />
+    <Content Include="Content\menu.css" />
+    <Content Include="Content\stylesindex.css" />
+    <Content Include="Content\stylesservices.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -189,6 +196,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\scriptReloj.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -206,17 +214,20 @@
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Cliente\Create.cshtml" />
     <Content Include="Views\Cliente\prueba.cshtml" />
-    <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Usuario\Create.cshtml" />
+    <Content Include="Views\Servicio\Index.cshtml" />
+    <Content Include="Views\Servicio\Detalle.cshtml" />
+    <Content Include="Views\Calificaciones\Index.cshtml" />
+    <Content Include="Views\Usuario\Ingresar.cshtml" />
+    <Content Include="Views\Usuario\Salir.cshtml" />
+    <Content Include="Views\Reserva\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Imagenes\" />
-    <Folder Include="Views\Calificaciones\" />
+    <Folder Include="Img\" />
     <Folder Include="Views\Mascota\" />
     <Folder Include="Views\ReservaServicio\" />
-    <Folder Include="Views\Reserva\" />
-    <Folder Include="Views\Servicio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -10,7 +10,7 @@ namespace ContratosControladorApp1.Contratos
     public interface IReservaApp
     {
         bool RegistrarReserva(ReservaDTO reserva);
-        ReservaDTO BuscarReserva(int id);
+        Boolean BuscarReserva(DateTime fecha, TimeSpan hora);
         bool EliminarReserva(int id);
         bool ActualizarReserva(ReservaDTO reserva);
         IEnumerable<ReservaDTO> ConsultaReserva();

@@ -17,7 +17,8 @@ namespace AccesoDatos1.Mapeadores
                 Servicio = entrada.id_servicio,
                 Nombre_servicio = entrada.nombre_servicio,
                 descripcion_servicio = entrada.descripcion_servicio,
-                Imagen = entrada.imagen_servicio
+                Imagen = entrada.imagen_servicio,
+                Precio = entrada.precio
 
             };
         }
@@ -38,7 +39,8 @@ namespace AccesoDatos1.Mapeadores
                 id_servicio = entrada.Servicio,
                 nombre_servicio = entrada.Nombre_servicio,
                 descripcion_servicio = entrada.descripcion_servicio,
-                imagen_servicio = entrada.Imagen
+                imagen_servicio = entrada.Imagen,
+                precio = entrada.Precio
 
             };
         }

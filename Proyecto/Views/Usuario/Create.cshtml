@@ -1,41 +1,54 @@
 ﻿@model Proyecto.Models.UsuarioModel
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Registro de usuario";
 }
-
-<h2>Create</h2>
-
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
+    <body>
+        <div class="div-title">
+            <h2 class="title-user">Registrar usuario</h2>
+        </div>
 
-<div class="form-horizontal">
-    <h4>Usuario</h4>
+        <div class="formulario">
+            <div class="title-form">
+                <h4>Registrarse</h4>
+            </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Nombre)
-            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+            <div class="campo">
+                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "labelinput" })
+                <div class="div-input">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "input-formu" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, null, new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="campo">
+                @Html.LabelFor(model => model.Contraseña, htmlAttributes: new { @class = "labelinput" })
+                <div class="div-input">
+                    @Html.PasswordFor(model => model.Contraseña, new { @class = "input-formu"})
+                    @Html.ValidationMessageFor(model => model.Contraseña, null, new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="campo">
+                @Html.LabelFor(model => model.Contraseña2, htmlAttributes: new { @class = "labelinput" })
+                <div class="div-input">
+                    @Html.PasswordFor(model => model.Contraseña2, new { @class = "input-formu" })
+                    @Html.ValidationMessageFor(model => model.Contraseña2, null, new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="campo-boton">
+                <div class="div-boton">
+                    <input type="submit" value="Create" class="boton" />
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.Contraseña, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Contraseña)
-            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
-        </div>
-    </div>
-</div>
+    </body>
 }
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
-
+@Styles.Render("~/Content/estiloRegistroUsuario.css")

@@ -4,6 +4,7 @@ using Proyecto.Mapeadores;
 using Proyecto.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -18,7 +19,6 @@ namespace Proyecto.Controllers
             _controlador = app;
 
         }
-
         public ActionResult Index()
         {
             MapeadorUIServicio mapeador = new MapeadorUIServicio();
@@ -26,12 +26,21 @@ namespace Proyecto.Controllers
             IEnumerable<ServicioModel> model = mapeador.MapearT1T2(ListaServicioDTO);
             return View(model);
         }
-
-        public ActionResult Create()
+        public ActionResult Detalle(int id)
+        {
+            MapeadorUIServicio mapeador = new MapeadorUIServicio();
+            ServicioDTO dto = _controlador.BuscarServicio(id);
+            ServicioModel modelo = mapeador.MapearT1T2(dto);
+            return View(modelo);
+        }
+        public ActionResult Calificar()
         {
             return View();
         }
-
+        public ActionResult Create()
+        {
+            return RedirectToAction("Index");
+        }
 
         [HttpPost]
         public ActionResult Create(ServicioModel model)

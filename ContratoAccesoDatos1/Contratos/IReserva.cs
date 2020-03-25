@@ -10,7 +10,7 @@ namespace ContratoAccesoDatos1.Contratos
      public interface IReserva
     {
         bool RegistrarReserva(ReservaDBModel reserva);
-        ReservaDBModel BuscarReserva(int id);
+        Boolean BuscarReserva(DateTime fecha, TimeSpan hora);
         bool EliminarReserva(int id);
         bool ActualizarReserva(ReservaDBModel reserva);
         IEnumerable<ReservaDBModel> ConsultaReserva();
